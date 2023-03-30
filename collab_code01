@@ -128,3 +128,4 @@ history = model.fit(train_padded_sequences, train_df['label'],
 # Test the model
 loss, accuracy = model.evaluate(test_padded_sequences, test_df['label'], verbose=False)
 print("Test Accuracy: {:.4f}".format(accuracy*100))
+model.save('sentiment_analysis_rnn.h5')
